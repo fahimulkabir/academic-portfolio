@@ -1,0 +1,152 @@
+.site-header {
+  background-color: #1b2b85;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav a, .dropdown-label {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Style for the dropdown menu */
+
+.nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 200px;
+  background-color: #2d6ce0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style for the dropdown items */
+.dropdown-menu li {
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #2052af;
+}
+
+
+#w-btn {
+  background: #fff;
+  color: #1f4a40;
+  padding: 10px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+#w-btn i {
+  line-height: 80px;
+  padding: 0 2px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.3rem;
+  color: #1b2b85;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 999px) {
+  nav{
+    position: fixed;
+    top: 80px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #1b2b85;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    padding: 80px 0 0 10px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav ul li {
+    margin-top: 25px;
+  }
+  nav.open {
+    right: 0;
+  }
+
+  .dropdown-menu{
+    background-color: transparent;
+    box-shadow: none;
+    position: static;
+  }
+
+  .dropdown-menu li {
+    margin-bottom: 0 !important;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: static;
+    min-width: auto;
+  }
+
+  .dropdown-menu li:hover{
+    background: none;
+  }
+
+  .menu-toggle {
+    display: initial;
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 20px;
+    background: none;
+    border: none;
+  }
+}
