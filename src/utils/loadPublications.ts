@@ -1,10 +1,5 @@
-type Publication = {
-  title: string;
-  authors: string;
-  venue: string;
-  year: number;
-  body: string;
-};
+import type { Publication } from "../types/publication";
+
 
 function parseFrontmatter(raw: string) {
   const match = raw.match(/^---([\s\S]*?)---([\s\S]*)$/);

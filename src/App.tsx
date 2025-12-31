@@ -4,7 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 
 import Home from "./pages/Home";
 import Publications from "./pages/Publications";
-import Students from "./pages/Students";
+import Members from "./pages/Members";
 // import Projects from "./pages/Projects";
 // import Contact from "./pages/Contact";
 
@@ -17,7 +17,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/publications" element={<Publications />} />
           {/* <Route path="/projects" element={<Projects />} /> */}
-          <Route path="/students" element={<Students />} />
+          <Route path="/members" element={<Members />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
         </Route>
       </Routes>

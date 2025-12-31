@@ -9,7 +9,7 @@ public_folder: "/uploads"
 collections:
   - name: "publications"
     label: "Publications"
-    folder: "content/publications"
+    folder: "src/content/publications"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -18,3 +18,30 @@ collections:
       - { label: "Venue", name: "venue", widget: "string" }
       - { label: "Year", name: "year", widget: "number" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "members"
+    label: "Members"
+    folder: "src/content/members"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+
+      - label: "Position"
+        name: "position"
+        widget: "select"
+        options:
+          - faculty
+          - postdoc
+          - phd
+          - ms
+          - bachelors
+
+      - { label: "Start Date", name: "startDate", widget: "string" }
+      - { label: "End Date", name: "endDate", widget: "string", required: false }
+
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+
+      - { label: "Bio", name: "body", widget: "markdown" }

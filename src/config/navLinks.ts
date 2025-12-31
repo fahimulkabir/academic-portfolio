@@ -11,16 +11,16 @@ export const NAVIGATION: NavItem[] = [
     path: "/",
   },
   {
-    label: "Research",
+    label: "Publications",
     path: "/publications",
   },
   {
-    label: "Projects",
-    path: "/projects",
+    label: "Research",
+    path: "/research",
   },
   {
-    label: "Students",
-    path: "/students",
+    label: "Members",
+    path: "/members",
   },
   {
     label: "Courses",

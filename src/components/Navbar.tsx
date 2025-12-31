@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NAVIGATION } from "../config/navLinks";
 import "../styles/navbar.css";
 
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
