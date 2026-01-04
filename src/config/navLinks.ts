@@ -37,8 +37,8 @@ export const NAVIGATION: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Contact",
-    path: "/contact",
-  },
+  // {
+  //   label: "Contact",
+  //   path: "/contact",
+  // },
 ];

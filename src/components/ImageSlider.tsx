@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/slider.css";
 
 type ImageSliderProps = {
   images: string[];
@@ -22,47 +23,18 @@ export default function ImageSlider({
     return () => clearInterval(timer);
   }, [images.length, interval]);
 
-  const prev = () =>
-    setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+  const prev = () => setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
 
-  const next = () =>
-    setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+  const next = () => setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
 
   return (
-    <div className="slider relative w-full max-w-4xl mx-auto">
-      <img
-        src={images[index]}
-        alt={`Slide ${index + 1}`}
-        className="w-full h-72 object-cover rounded-lg transition-opacity duration-500"
-      />
+    <div className="slider">
+      <img src={images[index]} alt={`Slide ${index + 1}`} />
 
       {/* Controls */}
-      <button
-        onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-1 rounded"
-      >
-        ‹
-      </button>
+      <button onClick={prev}>‹</button>
 
-      <button
-        onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-1 rounded"
-      >
-        ›
-      </button>
-
-      {/* Indicators */}
-      <div className="flex justify-center mt-3 gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-2 h-2 rounded-full ${
-              i === index ? "bg-black" : "bg-gray-400"
-            }`}
-          />
-        ))}
-      </div>
+      <button onClick={next}>›</button>
     </div>
   );
 }

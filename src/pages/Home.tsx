@@ -1,29 +1,64 @@
-// import ReactMarkdown from "react-markdown";
-// import type { Publication } from "../types/publication";
+// import { useEffect, useState } from "react";
 
-// TEMP: later this will come from CMS Markdown
-// const Home: Publication[] = [
-//   {
-//     title: "EEG-based Mental Health Analysis",
-//     authors: "F. Kabir et al.",
-//     venue: "Journal of Biomedical Informatics",
-//     year: 2025,
-//     body: "This paper studies **EEG signals** for mental health."
-//   }
-// ];
+// import type { ResearchOverview } from "../types/research";
+
+// import { loadResearchOverview } from "../utils/loadResearchOverview";
+
+import NewsPreview from "../components/NewsPreview";
+import PublicationsList from "../components/PublicationsPreview";
+import ProfessorProfile from "../components/ProfessorProfile";
 
 export default function Home() {
+  // const [overview, setOverview] = useState<ResearchOverview | null>(null);
+
+  // useEffect(() => {
+  //   loadResearchOverview().then(setOverview);
+  // }, []);
+
   return (
     <main>
-      <h1>Home</h1>
-      {/* {Home.map((p, i) => (
-        <article key={i}>
-          <h3>{p.title}</h3>
-          <p>{p.authors}</p>
-          <p>{p.venue} ({p.year})</p>
-          <ReactMarkdown>{p.body}</ReactMarkdown>
-        </article>
-      ))} */}
+      <section>
+        <ProfessorProfile />
+      </section>
+      {/* ---------------- Research Overview ---------------- */}
+      {/* {overview && (
+        <section className="research-overview sec-space">
+          <div className="image">
+            <ImageSlider images={overview.images} interval={5000} />
+          </div>
+          <div className="body">
+            <ReactMarkdown>{overview.body}</ReactMarkdown>
+          </div>
+        </section>
+      )} */}
+
+      {/* ---------------- News ---------------- */}
+      <section className="sec-space">
+        <NewsPreview limit={5} />
+      </section>
+
+      {/* ---------------- Publications ---------------- */}
+      {/* <section className="sec-space">
+        <h1>Selected Publications</h1>
+
+        <ul>
+          {publications.slice(0, 5).map((p, i) => (
+            <li key={i}>
+              <h3>{p.title}</h3>
+              {p.authors} <br />
+              <em>{p.venue}</em>, {p.year}
+            </li>
+          ))}
+        </ul>
+
+        <div id="show-more">
+          <Link to="/publications">Show more →</Link>
+        </div>
+      </section> */}
+
+      <section className="sec-space">
+        <PublicationsList limit={5} />
+      </section>
     </main>
   );
 }

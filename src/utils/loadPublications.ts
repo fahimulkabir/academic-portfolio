@@ -1,6 +1,5 @@
 import type { Publication } from "../types/publication";
 
-
 function parseFrontmatter(raw: string) {
   const match = raw.match(/^---([\s\S]*?)---([\s\S]*)$/);
 
@@ -22,10 +21,9 @@ function parseFrontmatter(raw: string) {
 }
 
 export async function loadPublications(): Promise<Publication[]> {
-  const files = import.meta.glob(
-    "/src/content/publications/*.md",
-    { as: "raw" }
-  );
+  const files = import.meta.glob("/src/content/publications/*.md", {
+    as: "raw",
+  });
 
   const publications: Publication[] = [];
 
@@ -38,7 +36,8 @@ export async function loadPublications(): Promise<Publication[]> {
       authors: data.authors,
       venue: data.venue,
       year: Number(data.year),
-      body
+      body,
+      link: data.link || undefined, // ✅ add this
     });
   }
 

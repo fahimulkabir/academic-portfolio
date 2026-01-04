@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import type {
-    ResearchOverview,
-    ResearchProject,
-} from "../types/research";
+import type { ResearchOverview, ResearchProject } from "../types/research";
 import { loadResearchOverview } from "../utils/loadResearchOverview";
 import { loadResearchProjects } from "../utils/loadResearchProjects";
 import ImageSlider from "../components/ImageSlider";
@@ -21,35 +18,39 @@ export default function Research() {
 
   return (
     <main>
-        <h1>This is a research page</h1>
+      <h1>Our Research</h1>
       {/* Section 1 — Overview */}
-      <section>
-        <ImageSlider images={overview.images} interval={5000} />
-
-
-        <ReactMarkdown>{overview.body}</ReactMarkdown>
+      <section className="research-overview">
+        <div className="image">
+          <ImageSlider images={overview.images} interval={5000} />
+        </div>
+        <div className="body">
+          <ReactMarkdown>{overview.body}</ReactMarkdown>
+        </div>
       </section>
 
       {/* Section 2 — Projects */}
-      <section>
+      <section className="sec-space">
         <h2>Research Projects</h2>
 
-        {projects.map((p, i) => (
-          <article key={i}>
-            <img src={p.image} alt={p.title} />
-            <h3>{p.title}</h3>
-            <ReactMarkdown>{p.body}</ReactMarkdown>
+        <hr />
 
-            {p.links?.map((l) => (
-              <a
-                key={l.url}
-                href={l.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {l.label}
-              </a>
-            ))}
+        {projects.map((p, i) => (
+          <article className="research-project" key={i}>
+            <div className="research-thumbnail">
+              <img src={p.image} alt={p.title} />
+            </div>
+
+            <div className="body">
+              <h3>{p.title}</h3>
+              <ReactMarkdown>{p.body}</ReactMarkdown>
+
+              {p.links?.map((l) => (
+                <a key={l.url} href={l.url} target="_blank" rel="noreferrer">
+                  {l.label}
+                </a>
+              ))}
+            </div>
           </article>
         ))}
       </section>

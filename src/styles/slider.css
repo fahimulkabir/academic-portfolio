@@ -1,0 +1,60 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 5;
+  transition: background 0.25s ease;
+}
+
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.slider button:first-of-type {
+  left: 14px;
+}
+
+.slider button:last-of-type {
+  right: 14px;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 600px) {
+  .slider {
+    height: 220px;
+  }
+  .slider button {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+  }
+}

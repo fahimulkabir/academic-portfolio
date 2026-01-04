@@ -4,4 +4,5 @@ export interface Publication {
   venue: string;
   year: number;
   body: string; // markdown content
+  link?: string; // optional paper link
 }

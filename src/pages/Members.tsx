@@ -18,6 +18,8 @@ export default function Members() {
     <main>
       <h1>Students & Team</h1>
 
+      <hr />
+
       {MEMBER_POSITIONS.map((position) => {
         const members = groups[position];
         if (!members || members.length === 0) return null;
@@ -28,15 +30,17 @@ export default function Members() {
 
             {members.map((member, i) => (
               <article key={i} className="member-card">
-                {member.photo && (
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="member-photo"
-                  />
-                )}
+                <div className="photo">
+                  {member.photo && (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="member-photo"
+                    />
+                  )}
+                </div>
 
-                <div>
+                <div className="body">
                   <h3>{member.name}</h3>
                   <p>
                     {member.startDate} – {member.endDate ?? "Present"}
@@ -46,10 +50,18 @@ export default function Members() {
 
                   <p>
                     {member.website && (
-                      <a href={member.website} target="_blank">Website</a>
+                      <a href={member.website} target="_blank">
+                        Website
+                      </a>
                     )}
                     {member.linkedin && (
-                      <> · <a href={member.linkedin} target="_blank">LinkedIn</a></>
+                      <>
+                        {" "}
+                        ·{" "}
+                        <a href={member.linkedin} target="_blank">
+                          LinkedIn
+                        </a>
+                      </>
                     )}
                   </p>
                 </div>
