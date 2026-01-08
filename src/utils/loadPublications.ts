@@ -36,8 +36,8 @@ export async function loadPublications(): Promise<Publication[]> {
       authors: data.authors,
       venue: data.venue,
       year: Number(data.year),
+      link: data.link || undefined,
       body,
-      link: data.link || undefined, // ✅ add this
     });
   }
 

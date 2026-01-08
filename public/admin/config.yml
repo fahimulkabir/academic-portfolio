@@ -25,12 +25,19 @@ collections:
             widget: "string"
             hint: "https://yourdomain.edu"
 
-          - {
-              label: "Your First Name",
-              name: "yourFirstName",
-              widget: "string",
-            }
-          - { label: "Your Last Name", name: "yourLastName", widget: "string" }
+          - label: "Your First Name"
+            name: "yourFirstName"
+            widget: "string"
+
+          - label: "Your Last Name"
+            name: "yourLastName"
+            widget: "string"
+
+          - label: "Navbar Display Name"
+            name: "navbarTitle"
+            widget: "string"
+            required: true
+            hint: "Shown as text logo"
 
           - label: "Allow Indexing"
             name: "allowIndexing"
@@ -51,6 +58,11 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Photo", name: "image", widget: "image", required: false }
+          - label: "Resume / CV (PDF)"
+            name: "cv"
+            widget: "file"
+            required: false
+            media_types: ["application/pdf"]
 
           - label: "Google Scholar"
             name: "googleScholar"
@@ -89,6 +101,7 @@ collections:
       - { label: "Authors", name: "authors", widget: "string" }
       - { label: "Venue", name: "venue", widget: "string" }
       - { label: "Year", name: "year", widget: "number" }
+      - { label: "Publication Link", name: "link", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "members"
