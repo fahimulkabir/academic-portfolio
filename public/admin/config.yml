@@ -1,11 +1,11 @@
-# backend:
-#   name: github
-#   repo: fahimulkabir/academic-portfolio   # <-- CHANGE THIS
-#   branch: main
+# For Netlify backend:
+#   name: git-gateway
+#   branch: main # Branch to update (optional; defaults to master)
 
+# For Cloudflare backend:
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
