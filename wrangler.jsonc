@@ -1,0 +1,9 @@
+{
+  "name": "academic-portfolio",
+  "compatibility_date": "2026-01-08",
+
+  // This is indicate Cloudflare about where Vite builds the site
+  "assets": {
+    "directory": "./dist"
+  }
+}

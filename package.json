@@ -11,10 +11,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "decap-cms-app": "^3.9.0",
+    "decap-cms-app": "^3.10.0",
     "gray-matter": "^4.0.3",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.11.0",
