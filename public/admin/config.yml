@@ -5,6 +5,7 @@
 # For Cloudflare backend:
 backend:
   name: github
+  repo: fahimulkabir/academic-portfolio
   branch: main
 
 media_folder: "public/uploads"
