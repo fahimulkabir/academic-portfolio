@@ -14,9 +14,7 @@ backend:
   branch: main
   auth_scope: repo
 
-site_url: https://academic-portfolio-gamma-eight.vercel.app
-
-publish_mode: editorial_workflow
+site_url: https://academic-portfolio-gamma-eight.vercel.app/
 
 media_folder: "public/uploads"
 public_folder: "uploads"
