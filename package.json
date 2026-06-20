@@ -13,6 +13,7 @@
   "dependencies": {
     "decap-cms-app": "^3.10.0",
     "gray-matter": "^4.0.3",
+    "netlify-cms-oauth-provider-node": "^2.0.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",

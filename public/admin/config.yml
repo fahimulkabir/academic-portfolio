@@ -13,7 +13,8 @@ backend:
   repo: fahimulkabir/academic-portfolio
   branch: main
   auth_scope: repo
-  base_url: https://portfolio-cms-oauth-mu.vercel.app
+  base_url: https://academic-portfolio-gamma-eight.vercel.app
+  auth_endpoint: api/auth
 
 site_url: https://academic-portfolio-gamma-eight.vercel.app/
 
