@@ -1,6 +1,6 @@
 ---
 title: "New test"
-image: /uploads/project1.jpg
+image: uploads/project1.jpg
 links:
   - label: Paper
     url: https://example.com/paper

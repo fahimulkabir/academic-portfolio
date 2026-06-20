@@ -3,13 +3,19 @@
 #   branch: main # Branch to update (optional; defaults to master)
 
 # For Cloudflare backend:
+# backend:
+#   name: github
+#   repo: ${CMS_REPO}
+#   branch: main
+
 backend:
   name: github
-  repo: ${CMS_REPO}
+  repo: fahimulkabir/academic-portfolio
   branch: main
+  auth_scope: repo
 
 media_folder: "public/uploads"
-public_folder: "/uploads"
+public_folder: "uploads"
 
 collections:
   - name: "site_settings"

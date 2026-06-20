@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/slider.css";
+import { getAssetUrl } from "../utils/getAssetUrl";
 
 type ImageSliderProps = {
   images: string[];
@@ -13,6 +14,8 @@ export default function ImageSlider({
   const [index, setIndex] = useState(0);
 
   if (!images || images.length === 0) return null;
+
+  const normalizedImages = images.map(getAssetUrl);
 
   // 👉 Autoplay
   useEffect(() => {
@@ -29,7 +32,8 @@ export default function ImageSlider({
 
   return (
     <div className="slider">
-      <img src={images[index]} alt={`Slide ${index + 1}`} />
+      {/* <img src={images[index]} alt={`Slide ${index + 1}`} /> */}
+      <img src={normalizedImages[index]} alt={`Slide ${index + 1}`} />
 
       {/* Controls */}
       <button onClick={prev}>‹</button>

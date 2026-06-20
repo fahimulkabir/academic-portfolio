@@ -10,6 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import { SiOrcid } from "react-icons/si";
+import { getAssetUrl } from "../utils/getAssetUrl";
 
 export default function ProfessorProfile() {
   const [prof, setProf] = useState<Professor | null>(null);
@@ -26,7 +27,7 @@ export default function ProfessorProfile() {
     <section className="professor-profile">
       {/* Left */}
       <div className="professor-image">
-        {prof.image && <img src={prof.image} alt={prof.name} />}
+        {prof.image && <img src={getAssetUrl(prof.image)} alt={prof.name} />}
       </div>
 
       {/* Right */}
@@ -37,8 +38,8 @@ export default function ProfessorProfile() {
         <div id="show-more">
           {prof.cv && (
             <a
-              href={prof.cv}
               className="cv-button"
+              href={getAssetUrl(prof.cv)}
               target="_blank"
               rel="noreferrer"
             >

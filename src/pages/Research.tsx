@@ -4,6 +4,7 @@ import type { ResearchOverview, ResearchProject } from "../types/research";
 import { loadResearchOverview } from "../utils/loadResearchOverview";
 import { loadResearchProjects } from "../utils/loadResearchProjects";
 import ImageSlider from "../components/ImageSlider";
+import { getAssetUrl } from "../utils/getAssetUrl";
 
 export default function Research() {
   const [overview, setOverview] = useState<ResearchOverview | null>(null);
@@ -22,7 +23,10 @@ export default function Research() {
       {/* Section 1 — Overview */}
       <section className="research-overview">
         <div className="image">
-          <ImageSlider images={overview.images} interval={5000} />
+          <ImageSlider
+            images={overview.images.map(getAssetUrl)}
+            interval={5000}
+          />
         </div>
         <div className="body">
           <ReactMarkdown>{overview.body}</ReactMarkdown>
@@ -38,7 +42,7 @@ export default function Research() {
         {projects.map((p, i) => (
           <article className="research-project" key={i}>
             <div className="research-thumbnail">
-              <img src={p.image} alt={p.title} />
+              <img src={getAssetUrl(p.image)} alt={p.title} />
             </div>
 
             <div className="body">

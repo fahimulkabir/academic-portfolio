@@ -1,7 +1,7 @@
 ---
 images:
-  - /uploads/lab1.jpg
-  - /uploads/lab2.jpg
+  - uploads/lab1.jpg
+  - uploads/lab2.jpg
 ---
 
 # DataX Lab

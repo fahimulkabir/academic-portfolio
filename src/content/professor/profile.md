@@ -1,7 +1,7 @@
 ---
 name: "Dr. John Doe"
-image: "/uploads/professor.jpg"
-cv: "/uploads/mingon-kang-cv.pdf"
+image: "uploads/professor.jpg"
+cv: "uploads/your-cv.pdf"
 googleScholar: "https://scholar.google.com/..."
 orcid: "https://orcid.org/0000-0000-0000-0000"
 linkedin: "https://linkedin.com/in/..."

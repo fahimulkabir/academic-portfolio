@@ -4,6 +4,7 @@ import type { Member } from "../types/member";
 import { MEMBER_POSITIONS } from "../config/memberPositions";
 import { loadMembers } from "../utils/loadMembers";
 import { groupMembersByPosition } from "../utils/groupMembers";
+import { getAssetUrl } from "../utils/getAssetUrl";
 
 export default function Members() {
   const [groups, setGroups] = useState<Record<string, Member[]>>({});
@@ -33,7 +34,7 @@ export default function Members() {
                 <div className="photo">
                   {member.photo && (
                     <img
-                      src={member.photo}
+                      src={getAssetUrl(member.photo)}
                       alt={member.name}
                       className="member-photo"
                     />
