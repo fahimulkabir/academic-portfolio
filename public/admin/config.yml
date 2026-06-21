@@ -60,11 +60,11 @@ collections:
             widget: "boolean"
             default: true
 
-  - name: "professor"
+  - name: "user"
     label: "Your Profile"
     files:
-      - file: "src/content/professor/profile.md"
-        label: "Professor Info"
+      - file: "src/content/user/profile.md"
+        label: "User Info"
         name: "profile"
         fields:
           - { label: "Name", name: "name", widget: "string" }
