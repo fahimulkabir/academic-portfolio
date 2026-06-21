@@ -1,6 +1,6 @@
 ---
 name: "John Doe"
-position: "phd"
+position: "PhD"
 startDate: "2022"
 endDate: "present"
 photo: "uploads/john.jpg"

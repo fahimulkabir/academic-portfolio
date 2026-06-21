@@ -1,6 +1,6 @@
 ---
 name: "King"
-position: "ms"
+position: "MS"
 startDate: "2022"
 endDate: "present"
 photo: "uploads/john.jpg"
