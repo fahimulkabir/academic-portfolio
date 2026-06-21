@@ -1,15 +1,23 @@
 export function getAssetUrl(imagePath: string) {
   if (!imagePath) return "";
 
-  // 1. If the image is already a full external web link, just return it
+  // 1. External links
   if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
     return imagePath;
   }
 
-  // 2. Remove any accidental leading slashes from the CMS path
-  // so we don't end up with double slashes like //uploads/image.png
-  const cleanPath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;
+  const baseUrl = import.meta.env.BASE_URL; // e.g., "/your-repo-name/"
 
-  // 3. Attach the Vite base URL (works for both "/" on Vercel and "/repo-name/" on GitHub Pages)
-  return `${import.meta.env.BASE_URL}${cleanPath}`;
+  // 2. DEFENSIVE CHECK: Did the CMS or another component already add the base URL?
+  // If the imagePath already starts with "/your-repo-name", just return it to prevent doubling.
+  const strippedBase = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+  if (imagePath.startsWith(baseUrl) || imagePath.startsWith(strippedBase)) {
+    return imagePath;
+  }
+
+  // 3. Clean and combine safely
+  const cleanPath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;
+  return baseUrl.endsWith("/")
+    ? `${baseUrl}${cleanPath}`
+    : `${baseUrl}/${cleanPath}`;
 }
