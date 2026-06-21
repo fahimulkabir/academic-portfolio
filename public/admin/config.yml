@@ -220,3 +220,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Update", name: "body", widget: "markdown" }
+
+  - name: "openings"
+    label: "Open Positions"
+    files:
+      - file: "src/content/join/join.md"
+        label: "Edit Join Page"
+        name: "join"
+        fields:
+          - {
+              label: "Heading",
+              name: "title",
+              widget: "string",
+              default: "Join Our Team",
+            }
+          - { label: "Message", name: "body", widget: "markdown" }
