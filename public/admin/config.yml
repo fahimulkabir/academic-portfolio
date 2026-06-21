@@ -13,10 +13,10 @@ backend:
   repo: fahimulkabir/academic-portfolio
   branch: main
   auth_scope: repo
-  base_url: https://academic-portfolio-gamma-eight.vercel.app
+  base_url: https://fahimulkabir-academic-portfolio.vercel.app/
   auth_endpoint: api/auth
 
-site_url: https://academic-portfolio-gamma-eight.vercel.app/
+site_url: https://fahimulkabir-academic-portfolio.vercel.app/
 
 media_folder: "public/uploads"
 public_folder: "uploads"
