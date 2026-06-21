@@ -6,8 +6,4 @@ year: 2025
 link: "https://doi.org/10.1016/j.jbi.2025.123456"
 ---
 
-This paper studies **EEG signals** for mental health diagnosis.
-
-- Uses CNN + ViT
-- Achieves 99% accuracy
-- Evaluated on multiple datasets
+I develop machine learning methods to solve important problems in healthcare and medicine. Please see my research lab for details. My work has been recognized by Ten Notable Advances in 2022 by Nature Medicine, Takeda PhD Fellowship, Baidu PhD Fellowship, MathWorks PhD Fellowship, Rising Stars in AI (Yunfan Award), Rising Stars in Data Science, AMIA Doctoral Dissertation Award Honorable Mention, and Forbes 30 Under 30.

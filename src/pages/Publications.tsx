@@ -3,7 +3,8 @@ import PublicationsList from "../components/PublicationsPreview";
 export default function Publications() {
   return (
     <main>
-      <PublicationsList showMoreLink={false}/>
+      {/* Set showBody to true! */}
+      <PublicationsList showMoreLink={false} showBody={true} />
     </main>
   );
 }

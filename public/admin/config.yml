@@ -61,7 +61,7 @@ collections:
             default: true
 
   - name: "professor"
-    label: "Professor Profile"
+    label: "Your Profile"
     files:
       - file: "src/content/professor/profile.md"
         label: "Professor Info"
@@ -110,10 +110,16 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Authors", name: "authors", widget: "string" }
-      - { label: "Venue", name: "venue", widget: "string" }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
       - { label: "Year", name: "year", widget: "number" }
-      - { label: "Publication Link", name: "link", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Publication Link",
+          name: "link",
+          widget: "string",
+          required: false,
+        }
+      - { label: "BibTeX", name: "bibtex", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "members"
     label: "Members"

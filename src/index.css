@@ -79,6 +79,12 @@ hr {
   display: flex;
 }
 
+.publication-paragraph {
+  margin: 10px 0 10px 0;
+  padding-left: 10px;
+  border-left: 3px solid #ccc;
+}
+
 /* Buttons */
 
 #show-more {

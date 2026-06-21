@@ -1,10 +1,3 @@
-// import { useEffect, useState } from "react";
-// import ReactMarkdown from "react-markdown";
-
-// import type { ResearchOverview } from "../types/research";
-
-// import { loadResearchOverview } from "../utils/loadResearchOverview";
-
 import NewsPreview from "../components/NewsPreview";
 import PublicationsList from "../components/PublicationsPreview";
 import ProfessorProfile from "../components/ProfessorProfile";

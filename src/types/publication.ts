@@ -3,6 +3,7 @@ export interface Publication {
   authors: string;
   venue?: string;
   year: number;
-  link?: string; // optional paper link
-  body?: string; // markdown content
+  link?: string;
+  bibtex?: string;
+  body?: string;
 }
