@@ -9,6 +9,6 @@ disallowAdmin: true
 showHome: true
 showPublications: true
 showResearch: true
-showMembers: false
-showJoinUs: false
+showMembers: true
+showJoinUs: true
 ---
