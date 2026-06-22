@@ -70,6 +70,9 @@ hr {
 
 /* List  */
 
+li {
+  margin-left: 20px;
+}
 .custom-list {
   margin-left: 20px;
   margin-bottom: 10px;
@@ -313,6 +316,10 @@ footer a:hover {
 }
 
 @media (max-width: 530px) {
+  h1 {
+    font-size: 22px;
+    line-height: 34px;
+  }
   /* user's Profile */
   .user-profile {
     flex-direction: column;

@@ -103,7 +103,7 @@ nav a,
     right: -300px;
     width: 300px;
     height: 100vh;
-    background: #1b2b85;
+    background: #343a40;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     padding: 80px 0 0 10px;
@@ -148,5 +148,12 @@ nav a,
     padding-left: 20px;
     background: none;
     border: none;
+  }
+}
+
+@media (max-width: 530px) {
+  .logo {
+    font-size: 22px;
+    line-height: 34px;
   }
 }
